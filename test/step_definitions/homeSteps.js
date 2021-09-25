@@ -13,6 +13,6 @@ When(/^I add ([^"]*) items to cart$/, (count) => {
   homePage.addItemsToCart(count);
 })
 
-When(/^I navigate to checkout page$/, () => {
-  homePage.navigateToCheckout();
+When(/^I navigate to cart page$/, () => {
+  homePage.navigateToCartPage();
 })

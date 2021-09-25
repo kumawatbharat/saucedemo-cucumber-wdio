@@ -11,7 +11,7 @@ class HomePage extends Page{
     return $$('.inventory_item_price')
   }
 
-  get checkoutBtnList(){
+  get addToCartBtnList(){
     return $$('.btn_inventory')
   }
 
@@ -19,7 +19,7 @@ class HomePage extends Page{
     return $$('.inventory_item_name')
   }
 
-  get checkoutBtn(){
+  get cartBtn(){
     return $('.shopping_cart_badge')
   }
 
@@ -46,14 +46,14 @@ class HomePage extends Page{
   addItemsToCart(items){
     let addedItems = [];
     for(let count = 0; count<items; count++){
-      this.checkoutBtnList[count].click();
+      this.addToCartBtnList[count].click();
       addedItems.push({name: this.inventoryItemsList[count].getText(), price: parseFloat(this.itemsPriceList[count].getText().substring(1))})
     }
     browser.config.checkoutItemsList = addedItems;
   }
 
-  navigateToCheckout(){
-    this.checkoutBtn.click()
+  navigateToCartPage(){
+    this.cartBtn.click()
   }
 }
 
