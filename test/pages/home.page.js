@@ -11,6 +11,18 @@ class HomePage extends Page{
     return $$('.inventory_item_price')
   }
 
+  get checkoutBtnList(){
+    return $$('.btn_inventory')
+  }
+
+  get inventoryItemsList(){
+    return $$('.inventory_item_name')
+  }
+
+  get checkoutBtn(){
+    return $('.shopping_cart_badge')
+  }
+
   sort(option){
     this.sortDropDown.waitForDisplayed();
     if(option === 'lowest to highest')
@@ -29,6 +41,19 @@ class HomePage extends Page{
       }
       expect(sorted).to.be.true;
     }
+  }
+
+  addItemsToCart(items){
+    let addedItems = [];
+    for(let count = 0; count<items; count++){
+      this.checkoutBtnList[count].click();
+      addedItems.push({name: this.inventoryItemsList[count].getText(), price: parseFloat(this.itemsPriceList[count].getText().substring(1))})
+    }
+    browser.config.checkoutItemsList = addedItems;
+  }
+
+  navigateToCheckout(){
+    this.checkoutBtn.click()
   }
 }
 

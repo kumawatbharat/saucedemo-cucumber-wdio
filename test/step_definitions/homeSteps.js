@@ -1,4 +1,4 @@
-import { Then } from '@wdio/cucumber-framework'
+import { When, Then } from '@wdio/cucumber-framework'
 import homePage from '../pages/home.page'
 
 Then(/^I sort items "([^"]*)" price$/, (option) => {
@@ -7,4 +7,12 @@ Then(/^I sort items "([^"]*)" price$/, (option) => {
 
 Then(/^I verify items are sorted "([^"]*)" successfully$/, (option) => {
   homePage.verifyItemSorted(option);
+})
+
+When(/^I add ([^"]*) items to cart$/, (count) => {
+  homePage.addItemsToCart(count);
+})
+
+When(/^I navigate to checkout page$/, () => {
+  homePage.navigateToCheckout();
 })
