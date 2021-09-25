@@ -2,3 +2,6 @@
 
 ## To run tests
 `npm run test`
+
+## To run tests in healess mode
+`npm run headless`

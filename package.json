@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "wdio wdio.conf.js"
+    "test": "wdio config/wdio.conf.js",
+    "headless": "wdio config/headless.conf.js"
   },
   "author": "",
   "license": "ISC",
