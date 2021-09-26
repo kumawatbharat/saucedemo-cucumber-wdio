@@ -6,7 +6,7 @@
     "test": "wdio config/wdio.conf.js",
     "headless": "wdio config/headless.conf.js"
   },
-  "author": "",
+  "author": "Bharat Kumawat",
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^7.13.1"
