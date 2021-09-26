@@ -1,5 +1,8 @@
 # [saucedemo](https://www.saucedemo.com) Site UI Automation
 
+## Install dependencies
+`npm install`
+
 ## To run tests
 `npm run test`
 

@@ -1,11 +1,17 @@
 {
   "name": "sauce-demo-cucumber",
   "version": "1.0.0",
-  "description": "",
+  "description": "UI Automation sample code",
   "scripts": {
     "test": "wdio config/wdio.conf.js",
     "headless": "wdio config/headless.conf.js"
   },
+  "keywords": [
+    "WebdriverIO",
+    "Cucumber",
+    "UI Automation",
+    "NodeJS"
+  ],
   "author": "Bharat Kumawat",
   "license": "ISC",
   "dependencies": {
